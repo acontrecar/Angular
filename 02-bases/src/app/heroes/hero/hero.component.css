@@ -1,0 +1,12 @@
+h1 {
+  margin-bottom: 0;
+  color: #4d4d4d;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+dd {
+  font-size: 2rem;
+  font-weight: bold;
+}
