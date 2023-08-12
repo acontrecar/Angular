@@ -9,6 +9,14 @@ export class ContriesService {
 
   constructor(private http: HttpClient) {}
 
+  public searchCountryByAlphaCode(id: string): Observable<Country | null> {
+    const url = `${this.apiUrl}/alpha/${id}`;
+    return this.http.get<Country[]>(url).pipe(
+      map((countries) => (countries.length > 0 ? countries[0] : null)),
+      catchError(() => of(null))
+    );
+  }
+
   public searchCapital(term: string): Observable<Country[]> {
     return this.http
       .get<Country[]>(`${this.apiUrl}/capital/${term}`)
