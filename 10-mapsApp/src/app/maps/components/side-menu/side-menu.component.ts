@@ -26,7 +26,7 @@ export class SideMenuComponent {
     },
     {
       route: '/maps/properties',
-      name: 'Properties',
+      name: 'Houses',
     },
   ];
 }
