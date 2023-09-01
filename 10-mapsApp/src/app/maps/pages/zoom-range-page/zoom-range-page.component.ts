@@ -18,10 +18,7 @@ export class ZoomRangePageComponent implements AfterViewInit, OnDestroy {
 
   public zoomLevel: number = 10;
   public map?: Map;
-  public currentLngLat: LngLat = new LngLat(
-    6.140614806588928,
-    36.690143622209334
-  );
+  public currentLngLat: LngLat = new LngLat(-6.1297519, 36.6843333);
 
   ngAfterViewInit(): void {
     if (!this.divMap) throw new Error('divMap is not defined');
